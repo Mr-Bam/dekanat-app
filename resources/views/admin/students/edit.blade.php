@@ -51,7 +51,7 @@
         <label for="dormitory">Dormitory</label>
         <select id="dormitory" class="form-select mb-3" name="dormitory">
             @foreach ($dormitories as $dormitory)
-                <option value="{{ $dormitory->id }}">{{ $dormitory->number }}</option>
+                <option {{ ($dormitory->id == $student->dormitory->id) ? 'selected' : '' }} value="{{ $dormitory->id }}">{{ $dormitory->number }}</option>
             @endforeach
         </select>
 
